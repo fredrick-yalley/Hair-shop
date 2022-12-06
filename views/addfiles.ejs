@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+</head>
+<body>
+    <h1>Import Photo </h1>
+
+    <form method="POST" action="/api/v1/products/createProduct" enctype="multipart/form-data">
+        <input type="text" name="name">
+        <input type="number" name="price">
+        <input type="text" name="category">
+
+        <input type="file" name='file' >
+        <input type="text" placeholder="description" name="description">
+
+        <button type="submit" class="bu">Create Product</button>
+    </form>
+</body>
+</html>

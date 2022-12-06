@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <h1>Sign Up</h1>
+    <ul>
+        <% if(typeof errors != 'undefined') { errors.forEach(error => { %>
+            <li><%= error.message %></li>
+       <% })%>
+            
+        <%} %>
+    </ul>
+    <form action="/api/v1/users/signUp" method="post">
+        <div>
+            <input type="text" name="firstName" id="first_name" placeholder="First Name">
+        </div>
+        <div>
+            <input type="text" name="lastName" id="last_name" placeholder="Last Name">
+        </div>
+
+        <div>
+            <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div>
+            <input type="password" name="password2" id="password2" placeholder="Confirm Password">
+        </div>
+        <div>
+            <button type="submit" value="signUp">Sign Up</button>
+            <!-- <button type="reset" value="reset">Reset</button> -->
+        </div>
+        <a href="/users/login">Already registered? Login</a>
+    </form>
+</body>
+</html>

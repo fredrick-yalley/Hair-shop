@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,18 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Products</title>
 </head>
+
 <body>
     <a href="/users/logout">Logout</a>
-   
+    
 </body>
 <script>
-    if ( window.document.cookie.split('=')[1] && window.document.cookie.split('=')[1].length>20) {
-        
-    }else{
+    
+    if (window.document.cookie.split('=')[1] && window.document.cookie.split('=')[1].length > 20) {
+
+    } else {
         window.location.replace('./login');
     }
 </script>
+
 </html>
